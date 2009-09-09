@@ -1,0 +1,3 @@
+{def greetings(obj)}{if obj == "Borg"}Resistance is futile!{else}{$hello()} {$obj}!
+{end}{end}
+{def hello}Hello{end}

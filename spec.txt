@@ -1,0 +1,11 @@
+{$ expr } - Replace with evaluated python expression expr
+{% expr } - Replace with escaped evaluated python expression
+{# ... } - Comment
+{ for var in expr }...{ end } - nen
+{ if expr }...[{ elif expr }...][{ else }...]{ end } - nen
+{ if exists var }...[{ elif expr }...][{ else }...]{ end } - if var exists, execute code
+{ include [raw] filename } - includes file into current as if thats where it was, optionally ignoring possible titen directives
+{ import filename } - loads any functions created in filename, nothing else is executed and is replaced with ''
+{ def func(params, ...) }...{ end } - Creates a function that can be called like any other function
+
+{{ - replaced with {

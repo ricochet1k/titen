@@ -1,1 +1,6 @@
-{import greetings.ttn}{if exists things_to_greet}{for thing in things_to_greet}{if thing != 'Matt'}{$greetings(thing)}{end}{end}{end}
+{import greetings.ttn}
+{if exists things_to_greet}
+	{for thing in things_to_greet}
+		{if thing != 'Bob'}{$greetings(thing)}{end}
+	{end}
+{end}

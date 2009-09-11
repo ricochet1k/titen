@@ -199,9 +199,10 @@ def _parse(text):
 	if len(stack) != 1:
 		raise Exception("Not enough {end}")
 	f = _do_list(stack[0])
-	def titen_render(l={}):
+	def titen_render(template_locals={},**template_locals2):
+		template_locals.update(template_locals2)
 		try:
-			return f(l)
+			return f(template_locals)
 		except Exception,e:
 			return str(e.__class__.__name__) + ": " + str(e)
 	return titen_render
